@@ -57,4 +57,57 @@ public class HomeWorkApp {
             System.out.print(array[i] + " ");
         }
     }
+    
+    public static void Ex4(){
+
+        System.out.print("Введите размер массива: ");
+        userNum = in.nextInt();
+        dArray = new int[userNum][userNum];
+
+        for (int i = 0; i < userNum; i++){
+            for (int j = 0; j < userNum; j++){
+                dArray[i][j] = i == j || i == userNum - j - 1 ? 1 : 0;
+                System.out.print(dArray[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void Ex5(){
+
+        System.out.print("Введите длину массива: ");
+        size = in.nextInt();
+        System.out.print("Введите значение: ");
+        userNum = in.nextInt();
+
+        array = methodForEx5(size, userNum);
+        System.out.println(Arrays.toString(array));
+    }
+
+    public static int[] methodForEx5(int len, int initialValue){
+
+        Arrays.fill(array = new int[size], initialValue);
+        return array;
+    }
+
+    public static void Ex6(){
+
+        System.out.print("Введите длину массива: ");
+        size = in.nextInt();
+        array = new int[size];
+
+        for (int i = 0; i < size; i++){
+            array[i] = rand.nextInt(10);
+        }
+        System.out.println(Arrays.toString(array));
+
+        minValue = array[0];
+        maxValue = array[0];
+        for (int item : array){
+            if (minValue > item) minValue = item;
+            if (maxValue < item) maxValue = item;
+        }
+        System.out.println("Минимальное значение: " + minValue);
+        System.out.println("Максимальное значение: " + maxValue);
+    }
 }
