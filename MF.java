@@ -18,12 +18,20 @@ public class MainFrame extends JFrame {
         AuthorizationPanel ap = new AuthorizationPanel();
         //ap.setSize(300, 300);
 
-        horizontalBox.add(Box.createHorizontalGlue());
-        horizontalBox.add(verticalBox);
-        verticalBox.add(Box.createVerticalGlue());
-        verticalBox.add(ap);
-        verticalBox.add(Box.createVerticalGlue());
-        horizontalBox.add(Box.createHorizontalGlue());
+        AdminPanel adminPanel = new AdminPanel();
+
+        UserPanel userPanel = new UserPanel();
+
+//        horizontalBox.add(Box.createHorizontalGlue());
+//        horizontalBox.add(verticalBox);
+//        verticalBox.add(Box.createVerticalGlue());
+//        verticalBox.add(ap);
+//        verticalBox.add(Box.createVerticalGlue());
+//        horizontalBox.add(Box.createHorizontalGlue());
+
+        horizontalBox.add(Box.createHorizontalStrut(20));
+        horizontalBox.add(userPanel);
+        horizontalBox.add(Box.createHorizontalStrut(20));
 
 
         setContentPane(horizontalBox);
@@ -32,3 +40,4 @@ public class MainFrame extends JFrame {
         setVisible(true);
     }
 }
+
