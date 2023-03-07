@@ -29,14 +29,13 @@ public class MainFrame extends JFrame {
 //        verticalBox.add(Box.createVerticalGlue());
 //        horizontalBox.add(Box.createHorizontalGlue());
 
-        horizontalBox.add(Box.createHorizontalStrut(20));
-        horizontalBox.add(userPanel);
-        horizontalBox.add(Box.createHorizontalStrut(20));
 
+        setContentPane(userPanel);
 
-        setContentPane(horizontalBox);
+        //setContentPane(horizontalBox);
 
         setLocationRelativeTo(null);
+        setResizable(false);
         setVisible(true);
     }
 }
